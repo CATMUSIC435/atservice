@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="build.css" rel="stylesheet">
+</head>
+
+<body class="font-[fangsong]">
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md">
+        <div class="mx-auto flex items-center justify-between px-12 py-4">
+
+            <!-- Logo -->
+            <div class="text-amber-500 font-semibold tracking-widest text-lg">
+                <img src="assets/images/logo-at.png" class="h-10 w-full" alt="">
+            </div>
+
+            <!-- NAV -->
+            <nav class="relative">
+                <ul class="flex items-center gap-10 text-white uppercase text-sm tracking-wider relative">
+
+                    <!-- Animated Border -->
+                    <span id="menu-border"
+                        class="absolute border border-white rounded-md pointer-events-none opacity-0">
+                    </span>
+
+                    <li class="menu-item relative px-4 py-2 cursor-pointer">
+                        Giới thiệu
+                    </li>
+
+                    <!-- MENU CÓ DROPDOWN -->
+                    <li class="menu-item has-dropdown relative px-4 py-2 cursor-pointer">
+
+                        <span>Dự án</span>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="dropdown absolute left-1/2 transform -translate-x-1/2 top-full mt-6 w-64 text-black shadow-inner opacity-0 pointer-events-none translate-y-4">
+                            <ul class="py-4 flex flex-col gap-4 text-center">
+                                <li>Masteri Thảo Điền</li>
+                                <li>The Global City</li>
+                                <li>Lumière Riverside</li>
+                            </ul>
+                        </div>
+
+                    </li>
+
+                    <li class="menu-item relative px-4 py-2 cursor-pointer">
+                        Truyền thông
+                    </li>
+
+                    <li class="menu-item relative px-4 py-2 cursor-pointer">
+                        Khách hàng
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <section class="pb-20">
+            <div class="w-full h-[40vh] bg-center flex items-center justify-center" style="background-image: url(assets/images/jason-dent-w3eFhqXjkZE-unsplash.jpg);">
+                <h2 class="text-5xl uppercase font-bold text-center text-white">Tin tức</h2>
+            </div>
+        </section>
+        <section>
+            <div class="max-w-7xl mx-auto rounded-2xl shadow">
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full relative">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000"
+                            class="w-full h-full object-cover" alt="News Image">
+                    </div>
+
+                    <div class="p-8 flex flex-col flex-grow absolute bottom-10 left-0">
+                        <h3 class="text-2xl font-bold text-white leading-snug mb-3 uppercase  line-clamp-2">
+                            CHIẾN THẮNG "KÉP" TẠI GIẢI THƯỞNG DOANH NGHIỆP CHÂU Á 2025...
+                        </h3>
+
+                        <p class="text-base text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                            Ngày 9/10/2025 tại TP.HCM, ngay lần đầu tiên tham gia Asia Pacific Enterprise Awards
+                            2025 – giải thưởng doanh nghiệp...
+                        </p>
+
+                        <div class="mt-auto">
+                            <button
+                                class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#8e6d3a] transition-colors uppercase tracking-wider">
+                                Xem thêm <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#f9f7f2] py-20 px-6 font-sans">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000"
+                                class="w-full h-full object-cover" alt="News Image">
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug mb-3 uppercase  line-clamp-2">
+                                CHIẾN THẮNG "KÉP" TẠI GIẢI THƯỞNG DOANH NGHIỆP CHÂU Á 2025...
+                            </h3>
+
+                            <p class="text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Ngày 9/10/2025 tại TP.HCM, ngay lần đầu tiên tham gia Asia Pacific Enterprise Awards
+                                2025 – giải thưởng doanh nghiệp...
+                            </p>
+
+                            <div class="mt-auto">
+                                <button
+                                    class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#8e6d3a] transition-colors uppercase tracking-wider">
+                                    Xem thêm <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug mb-3 uppercase line-clamp-2">
+                                MASTERISE HOMES KHẲNG ĐỊNH VỊ THẾ TIÊN PHONG CÙNG BRANDED LIVING...
+                            </h3>
+                            <p class="text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Ngày 1/10, hội nghị quốc tế Meet The Experts (MTE) 2025 đã diễn ra tại Hà Nội, quy tụ
+                                hơn 700 khách mời và 40 diễn giả...
+                            </p>
+                            <div class="mt-auto">
+                                <button
+                                    class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 uppercase tracking-wider">
+                                    Xem thêm <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug mb-3 uppercase line-clamp-2">
+                                HÀNG HIỆU TRONG BẤT ĐỘNG SẢN: KHI TRẢI NGHIỆM ĐỊNH HÌNH VỊ THẾ
+                            </h3>
+                            <p class="text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Trong nhiều thập kỷ, "Hàng hiệu" từng được mặc định là những món đồ xa xỉ hữu hình:
+                                chiếc đồng hồ tinh xảo, túi xách...
+                            </p>
+                            <div class="mt-auto">
+                                <button
+                                    class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 uppercase tracking-wider">
+                                    Xem thêm <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000"
+                                class="w-full h-full object-cover" alt="News Image">
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug mb-3 uppercase  line-clamp-2">
+                                CHIẾN THẮNG "KÉP" TẠI GIẢI THƯỞNG DOANH NGHIỆP CHÂU Á 2025...
+                            </h3>
+
+                            <p class="text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Ngày 9/10/2025 tại TP.HCM, ngay lần đầu tiên tham gia Asia Pacific Enterprise Awards
+                                2025 – giải thưởng doanh nghiệp...
+                            </p>
+
+                            <div class="mt-auto">
+                                <button
+                                    class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#8e6d3a] transition-colors uppercase tracking-wider">
+                                    Xem thêm <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug mb-3 uppercase line-clamp-2">
+                                MASTERISE HOMES KHẲNG ĐỊNH VỊ THẾ TIÊN PHONG CÙNG BRANDED LIVING...
+                            </h3>
+                            <p class="text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Ngày 1/10, hội nghị quốc tế Meet The Experts (MTE) 2025 đã diễn ra tại Hà Nội, quy tụ
+                                hơn 700 khách mời và 40 diễn giả...
+                            </p>
+                            <div class="mt-auto">
+                                <button
+                                    class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 uppercase tracking-wider">
+                                    Xem thêm <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug mb-3 uppercase line-clamp-2">
+                                HÀNG HIỆU TRONG BẤT ĐỘNG SẢN: KHI TRẢI NGHIỆM ĐỊNH HÌNH VỊ THẾ
+                            </h3>
+                            <p class="text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Trong nhiều thập kỷ, "Hàng hiệu" từng được mặc định là những món đồ xa xỉ hữu hình:
+                                chiếc đồng hồ tinh xảo, túi xách...
+                            </p>
+                            <div class="mt-auto">
+                                <button
+                                    class="bg-[#a68246] text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 uppercase tracking-wider">
+                                    Xem thêm <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#0054a6] text-white py-16 px-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <img src="assets/images/logo-at.png" class="w-full h-full object-cover">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div class="space-y-6">
+                    <img src="assets/images/logo-at.png" class="h-12" alt="Logo">
+                    <h2 class="font-bold text-lg uppercase">CÔNG TY CỔ PHẦN DỊCH VỤ BẤT ĐỘNG SẢN ĐẤT XANH</h2>
+                    <div class="space-y-4 text-base opacity-90">
+                        <p><strong>TRỤ SỞ:</strong> 2W Ung Văn Khiêm, P. 25, Q. Bình Thạnh, TP. HCM</p>
+                        <p>📞 0964 355 355</p>
+                        <p>✉️ info@datxanhservices.vn</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8">
+                    <div>
+                        <h3 class="font-bold border-b border-white/20 pb-2 mb-4 uppercase">Giới thiệu</h3>
+                        <ul class="space-y-2 text-base opacity-80">
+                            <li><a href="#" class="hover:underline">Giới thiệu</a></li>
+                            <li><a href="#" class="hover:underline">Dịch vụ</a></li>
+                            <li><a href="#" class="hover:underline">Dự án</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold border-b border-white/20 pb-2 mb-4 uppercase">Dự án</h3>
+                        <ul class="space-y-2 text-base opacity-80">
+                            <li><a href="#" class="hover:underline">The Privia</a></li>
+                            <li><a href="#" class="hover:underline">Lan Anh Avenue</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold border-b border-white/20 pb-2 mb-4 uppercase">Dịch vụ</h3>
+                    <ul class="space-y-2 text-base opacity-80">
+                        <li>Tư vấn thị trường và sản phẩm</li>
+                        <li>Thiết kế và pháp lý dự án</li>
+                        <li>Quản lý tài sản và vận hành dự án</li>
+                        <li>Công nghệ bán hàng</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-bold border-b border-white/20 pb-2 mb-4 uppercase">Tuyển dụng</h3>
+                        <ul class="space-y-2 text-base opacity-80">
+                            <li>Chính sách nhân sự</li>
+                            <li>Vị trí tuyển dụng</li>
+                        </ul>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-[#0054a6] transition">f</a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-[#0054a6] transition">yt</a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-[#0054a6] transition">tk</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-lg opacity-60">
+                <p>Copyright © 2026 DAT XANH SERVICES. All right reserved.</p>
+                <p>Chính sách bảo vệ dữ liệu cá nhân</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
