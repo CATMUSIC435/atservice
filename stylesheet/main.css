@@ -81,7 +81,7 @@ font-family: "PT Serif", serif;
 }
 
 .nutritionSwiper .swiper-slide-active {
-  transform: scale(1.3); /* To lên một chút */
+  transform: scale(1.2); /* To lên một chút */
   opacity: 1;
 }
 
@@ -124,4 +124,28 @@ font-family: "PT Serif", serif;
 /* Fix lỗi hiển thị của Swiper Grid trên một số trình duyệt */
 #partner-slider .swiper-wrapper {
   box-sizing: border-box;
+}
+
+/* Swiper Slide Style */
+#main-project-slider .swiper-slide {
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng slide đang active thì to hơn một chút */
+#main-project-slider .swiper-slide-active {
+    transform: scale(1.02);
+}
+
+/* Custom cho nút điều hướng giống ảnh 3 */
+#btn-next, #btn-prev {
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Fix lỗi hiển thị khi lề quá lớn trên mobile */
+@media (max-width: 640px) {
+    .swiper-container {
+        slidesOffsetBefore: 20 !important;
+    }
 }

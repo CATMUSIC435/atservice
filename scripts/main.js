@@ -148,13 +148,148 @@ new Swiper(".heroSwiper", {
   }
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
+
+/* helper function */
+
+function animate(selector, settings) {
+
+  gsap.utils.toArray(selector).forEach(el => {
+
+    gsap.from(el, {
+      ...settings,
+
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        once: true
+      }
+
+    })
+
+  })
+
+}
+
+
+
+/* fade up */
+
+animate(".fade-up", {
+
+  y: 40,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out"
+
+})
+
+
+
+/* fade left */
+
+animate(".fade-left", {
+
+  x: -40,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out"
+
+})
+
+
+
+/* fade right */
+
+animate(".fade-right", {
+
+  x: 40,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out"
+
+})
+
+
+
+/* zoom card */
+
+animate(".zoom-soft", {
+
+  scale: 0.95,
+  opacity: 0,
+  duration: 0.7,
+  ease: "power2.out"
+
+})
+
+
+
+/* blur animation */
+
+animate(".blur-in", {
+
+  opacity: 0,
+  filter: "blur(8px)",
+  duration: 1,
+  ease: "power3.out"
+
+})
+
+
+
+/* stagger group */
+
+gsap.utils.toArray(".stagger-group").forEach(group => {
+
+  const items = group.querySelectorAll(".stagger-item")
+
+  gsap.from(items, {
+
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.12,
+    ease: "power2.out",
+
+    scrollTrigger: {
+      trigger: group,
+      start: "top 85%",
+      once: true
+    }
+
+  })
+
+})
+
+
+
+/* image reveal */
+
+gsap.utils.toArray(".img-reveal img").forEach(img => {
+
+  gsap.from(img, {
+
+    scale: 1.2,
+    duration: 1.2,
+    ease: "power3.out",
+
+    scrollTrigger: {
+      trigger: img,
+      start: "top 85%",
+      once: true
+    }
+
+  })
+
+})
 
 const mainTitle = document.getElementById('active-title');
-const mainBg = document.getElementById('dynamic-bg');
+// const mainBg = document.getElementById('dynamic-bg');
 
 new Swiper(".nutritionSwiper", {
   slidesPerView: 4.5,
-  spaceBetween: 30,
   centeredSlides: true, // Quan trọng: Để slide active nằm giữa hoặc vị trí dễ kiểm soát
   loop: true,
 
@@ -190,7 +325,7 @@ new Swiper(".nutritionSwiper", {
 
       // Đổi Background
       if (newBg) {
-        mainBg.src = newBg;
+        // mainBg.src = newBg;
       }
     }
   },
@@ -201,8 +336,8 @@ new Swiper(".nutritionSwiper", {
     1024: { slidesPerView: 3 },
     1280: {
       slidesPerView: 4.5, centeredSlides: true,
-  slidesOffsetBefore: 300,
-      spaceBetween: 60
+      slidesOffsetBefore: 300,
+      spaceBetween: 80
     } // Tùy chỉnh theo UI
   }
 });
@@ -256,4 +391,58 @@ new Swiper("#partner-slider", {
   // Cải thiện hiệu năng
   observer: true,
   observeParents: true,
+});
+
+const titleEl = document.getElementById('project-title');
+const categoryEl = document.getElementById('project-category');
+
+new Swiper("#main-project-slider", {
+  slidesPerView: 1.2,
+  spaceBetween: 20,
+  centeredSlides: false, // Để sát lề trái
+   loop: true,
+  // slidesOffsetBefore: 48, // Khớp với lề px-12 (48px) của Tailwind
+  speed: 800,
+
+  navigation: {
+    nextEl: "#btn-next",
+    prevEl: "#btn-prev",
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2.5,
+      // slidesOffsetBefore: 96, // Khớp với md:pl-24
+      spaceBetween: 30,
+    },
+    1280: {
+      slidesPerView: 3.5,
+      // slidesOffsetBefore: 96,
+      spaceBetween: 40,
+    }
+  },
+
+  on: {
+    slideChangeTransitionStart: function () {
+      const activeSlide = this.slides[this.activeIndex];
+      const title = activeSlide.getAttribute('data-title');
+      const category = activeSlide.getAttribute('data-category');
+
+      // Hiệu ứng mờ dần rồi hiện (Fade) cho Text
+      gsap.to([titleEl, categoryEl], {
+        opacity: 0,
+        y: 10,
+        duration: 0.3,
+        onComplete: () => {
+          titleEl.innerText = title;
+          categoryEl.innerText = category;
+          gsap.to([titleEl, categoryEl], {
+            opacity: 1,
+            y: 0,
+            duration: 0.4
+          });
+        }
+      });
+    }
+  }
 });
