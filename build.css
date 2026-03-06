@@ -316,6 +316,9 @@
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
   }
+  .left-8 {
+    left: calc(var(--spacing) * 8);
+  }
   .z-10 {
     z-index: 10;
   }
