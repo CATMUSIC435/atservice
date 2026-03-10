@@ -12,7 +12,7 @@
 
 <body class="font-[fangsong]">
     <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md">
-        <div class="mx-auto flex items-center justify-between px-12 py-4">
+        <div class="mx-auto flex items-center justify-between px-4 md:px-12 py-4">
 
             <!-- Logo -->
             <div class="text-amber-500 font-semibold tracking-widest text-lg">
@@ -20,51 +20,79 @@
             </div>
 
             <!-- NAV -->
-            <nav class="relative">
-                <ul class="flex items-center gap-10 text-white uppercase text-sm tracking-wider relative">
 
-                    <!-- Animated Border -->
-                    <span id="menu-border"
-                        class="absolute border border-white rounded-md pointer-events-none opacity-0">
-                    </span>
+            <div class="flex">
+                <nav class="relative hidden lg:block">
+                    <ul class="flex items-center gap-10 text-white uppercase text-sm tracking-wider relative">
 
-                    <li class="menu-item relative px-4 py-2 cursor-pointer">
-                        Giới thiệu
-                    </li>
+                        <!-- Animated Border -->
+                        <span id="menu-border"
+                            class="absolute border border-white rounded-md pointer-events-none opacity-0">
+                        </span>
 
-                    <!-- MENU CÓ DROPDOWN -->
-                    <li class="menu-item has-dropdown relative px-4 py-2 cursor-pointer">
+                        <li class="menu-item relative px-4 py-2 cursor-pointer">
+                            Giới thiệu
+                        </li>
 
-                        <span>Dự án</span>
+                        <!-- MENU CÓ DROPDOWN -->
+                        <li class="menu-item has-dropdown relative px-4 py-2 cursor-pointer">
 
-                        <!-- Dropdown -->
-                        <div
-                            class="dropdown absolute left-1/2 transform -translate-x-1/2 top-full mt-6 w-64 text-black shadow-inner opacity-0 pointer-events-none translate-y-4">
-                            <ul class="py-4 flex flex-col gap-4 text-center">
-                                <li>Masteri Thảo Điền</li>
-                                <li>The Global City</li>
-                                <li>Lumière Riverside</li>
-                            </ul>
-                        </div>
+                            <span>Dự án</span>
 
-                    </li>
+                            <!-- Dropdown -->
+                            <div
+                                class="dropdown absolute left-1/2 transform -translate-x-1/2 top-full mt-6 w-64 text-black shadow-inner opacity-0 pointer-events-none translate-y-4">
+                                <ul class="py-4 flex flex-col gap-4 text-center">
+                                    <li>Masteri Thảo Điền</li>
+                                    <li>The Global City</li>
+                                    <li>Lumière Riverside</li>
+                                </ul>
+                            </div>
 
-                    <li class="menu-item relative px-4 py-2 cursor-pointer">
-                        Truyền thông
-                    </li>
+                        </li>
 
-                    <li class="menu-item relative px-4 py-2 cursor-pointer">
-                        Khách hàng
-                    </li>
+                        <li class="menu-item relative px-4 py-2 cursor-pointer">
+                            Truyền thông
+                        </li>
 
-                </ul>
-            </nav>
+                        <li class="menu-item relative px-4 py-2 cursor-pointer">
+                            Khách hàng
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <button id="menu-toggle" class="flex flex-col gap-1.5 z-[60] relative p-2">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                </button>
+
+                <div id="mobile-menu"
+                    class="fixed inset-0 bg-[#d3ad6f]/75 z-50 h-screen flex flex-col items-center justify-center translate-x-full">
+                    <nav class="text-center">
+                        <ul class="flex flex-col gap-8 text-white uppercase text-2xl tracking-[0.2em]">
+                            <li class="mobile-link opacity-0">Giới thiệu</li>
+                            <li class="mobile-link opacity-0 flex flex-col items-center">
+                                <span>Dự án</span>
+                                <ul class="text-sm normal-case text-white mt-2 flex flex-col gap-2">
+                                    <li>Masteri Thảo Điền</li>
+                                    <li>The Global City</li>
+                                    <li>Lumière Riverside</li>
+                                </ul>
+                            </li>
+                            <li class="mobile-link opacity-0">Truyền thông</li>
+                            <li class="mobile-link opacity-0">Khách hàng</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
         </div>
     </header>
     <main>
     </main>
-    <footer class="bg-[#0054a6] text-white py-16 px-10 relative overflow-hidden">
+   <footer class="bg-[#d3ad6f] text-white py-16 px-10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <img src="assets/images/logo-at.png" class="w-full h-full object-cover">
         </div>

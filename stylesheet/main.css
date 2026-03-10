@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 body {
-font-family: "PT Serif", serif;
-  font-style: normal;
-  background-color: #fff;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    background-color: #fff;
 }
 
 /* custom navigation */
@@ -76,18 +76,20 @@ font-family: "PT Serif", serif;
 
 /* Phóng to ảnh khi active */
 .nutritionSwiper .swiper-slide {
-  transition: all 0.5s ease;
-  opacity: 0.6; /* Làm mờ các slide không active */
+    transition: all 0.5s ease;
+    opacity: 0.6;
+    /* Làm mờ các slide không active */
 }
 
 .nutritionSwiper .swiper-slide-active {
-  transform: scale(1.2); /* To lên một chút */
-  opacity: 1;
+    transform: scale(1.2);
+    /* To lên một chút */
+    opacity: 1;
 }
 
 /* Hiệu ứng chuyển nền mượt mà */
 #dynamic-bg {
-  transition: background-image 0.8s ease-in-out, filter 0.8s ease;
+    transition: background-image 0.8s ease-in-out, filter 0.8s ease;
 }
 
 /* Hiệu ứng mờ cho các nút bấm khi không hover */
@@ -108,22 +110,22 @@ font-family: "PT Serif", serif;
 }
 
 #partner-slider .swiper-slide {
-  display: flex;
-  cursor: pointer;
+    display: flex;
+    cursor: pointer;
 }
 
 /* Màu sắc Pagination giống mẫu ảnh của bạn */
 #partner-pagination .swiper-pagination-bullet {
-  @apply bg-slate-300 opacity-100 w-2 h-2 transition-all duration-300;
+    @apply bg-slate-300 opacity-100 w-2 h-2 transition-all duration-300;
 }
 
 #partner-pagination .swiper-pagination-bullet-active {
-  @apply bg-orange-500 w-6 rounded-full!;
+    @apply bg-orange-500 w-6 rounded-full !;
 }
 
 /* Fix lỗi hiển thị của Swiper Grid trên một số trình duyệt */
 #partner-slider .swiper-wrapper {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Swiper Slide Style */
@@ -138,7 +140,8 @@ font-family: "PT Serif", serif;
 }
 
 /* Custom cho nút điều hướng giống ảnh 3 */
-#btn-next, #btn-prev {
+#btn-next,
+#btn-prev {
     backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.05);
 }
@@ -148,4 +151,38 @@ font-family: "PT Serif", serif;
     .swiper-container {
         slidesOffsetBefore: 20 !important;
     }
+}
+
+.utility-pagination .swiper-pagination-bullet {
+    background: #cbd5e1;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.utility-pagination .swiper-pagination-bullet-active {
+    background: #f97316 !important;
+    width: 12px;
+    height: 12px;
+}
+
+/* Tùy chỉnh Nút điều hướng cho Slide Mặt bằng */
+.floor-button-prev,
+.floor-button-next {
+    width: 45px;
+    height: 45px;
+    background: #0284c7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.floor-button-prev:hover,
+.floor-button-next:hover {
+    background: #0369a1;
+    transform: scale(1.1);
 }
